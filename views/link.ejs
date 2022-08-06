@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <link rel="shortcut icon" href="https://www.pngmart.com/files/14/X-Letter-PNG-HD.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8472615513101624" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Nunito:wght@300&family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x-link | link</title>
+</head>
+<body style="text-align: center;">
+    <div id="container">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8472615513101624"
+        crossorigin="anonymous"></script>
+   <ins class="adsbygoogle"
+        style="display:block"
+        data-ad-format="fluid"
+        data-ad-layout-key="-6t+ed+2i-1n-4w"
+        data-ad-client="ca-pub-8472615513101624"
+        data-ad-slot="5522911842"></ins>
+   <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+   </script>   
+        <div id="kutu">
+            <h2 id="lutfenb" style="display: block;">Lütfen bekleyin!</h2>
+            <h2 id="hazir" style="display: none;">Hazır!</h2>
+            <h2 id="h2" style="display: block;">8</h2>
+            <a href="<%=xl.link%>" style="display: block;" target="_blank" rel="noopener noreferrer">
+                <button style="cursor: not-allowed; display: block;" onclick="gs()" id="lg">link'e git</button>
+            </a>
+        </div>
+    </div>
+    <script>
+            var rsayi = Math.floor(Math.random()*4);
+            console.log(rsayi);
+            if(rsayi==0){
+                document.querySelector('body').style.backgroundImage='url(https://i.hizliresim.com/38sn6fo.jpg)'
+            }else if(rsayi==1){
+                document.querySelector('body').style.backgroundImage='url(https://i.hizliresim.com/2uucpmk.png)'
+            }else if(rsayi==2){
+                document.querySelector('body').style.backgroundImage='url(https://i.hizliresim.com/1lxslvz.jpg)'
+            }else if(rsayi==3){
+                document.querySelector('body').style.backgroundImage='url(https://i.hizliresim.com/egzhvyz.jpg)'
+            }
+
+            var button = document.querySelector('#lg');
+            button.disabled = true;
+            
+            setTimeout(cikar, 1000)
+
+            function cikar(){
+                var h2 = document.getElementById('h2').innerHTML;
+                var h2s = h2 - 1;
+                document.getElementById('h2').innerHTML=h2s;
+                if(document.getElementById('h2').innerHTML!=0){
+                setTimeout(cikar, 1000);
+                }else{
+                    var button = document.querySelector('#lg');
+                    button.disabled = false;
+                    document.getElementById('h2').style.display="none";
+                    document.getElementById('lutfenb').style.display="none";
+                    document.getElementById('hazir').style.display="block";
+                    document.getElementById('lg').style.cursor="pointer";
+                }
+            }
+    </script>
+    <style>
+        *{
+            font-family: 'Nunito', sans-serif;
+            text-decoration: none;
+        }
+
+        #hazir{
+            display: none;
+        }
+
+        #lg{
+            font-size: 25px;
+            border: none;
+            margin: auto;
+            color: black;
+            background-color: rgba(0, 0, 0, 0);
+            border: solid 2px darkblue;
+            padding: 15px 30px 15px 30px;
+            transition: 0.4s;
+            border-radius: 35px;
+            font-weight: 800;
+        }
+
+        #lg:disabled{
+            color: rgb(131, 131, 131);
+            border: solid 2px rgb(127, 127, 255);
+        }
+
+        #lg:disabled:hover{
+            color: rgb(131, 131, 131);
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        #lg:hover{
+            background-color: darkblue;
+            color: whitesmoke;
+            transition: 0.4s;
+
+        }
+
+        #kutu{
+            border: solid 1px rgb(85, 85, 85);
+            height: auto;
+            width: 300px;
+            border-radius: 10px;
+            margin: auto;
+            padding-top: 50px;
+            box-shadow: 0px 0px 15px rgb(133, 133, 133);
+            padding-bottom: 50px;
+            background-color: rgba(247, 255, 255, 0.651);
+        }
+
+        body{
+            background-color: rgb(255, 252, 246);
+            padding: 0;
+            margin: 0;
+            background-image: url();
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #container{
+            background-color: rgba(255, 255, 255, 0);
+            height: 100vh;
+            width: auto;
+            display: flex;
+        }
+    </style>
+</body>
+</html>
