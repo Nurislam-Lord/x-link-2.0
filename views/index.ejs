@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr-TR">
+<head>
+    <link rel="shortcut icon" href="https://www.pngmart.com/files/14/X-Letter-PNG-HD.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>x-link | anasayfa</title>
+</head>
+<body style="text-align: center; display: none;">
+    <form action="" method="post" style="margin-top: 150px;">
+        <input type="text" autocomplete="off" name="link">
+        <button type="submit">gönder</button>
+    </form>
+    <br><br><hr><br><br>
+    <% xl.forEach(xl => { %>
+        <h3 style="display: inline;">gideceği link:</h3> 
+        <h3 style="user-select: all; display: inline;" onclick="kopyala()"><%=xl.link%></h3><br>
+        <a href="<%=xl.link%>" target="_blank" rel="noopener noreferrer">git</a><br><br>
+        <h3 style="display: inline;">link:</h3>
+        <h3 style="user-select: all; display: inline;" onclick="kopyala()">https://x-link.herokuapp.com/link/<%=xl._id%></h3><br>
+        <a href="/link/<%=xl._id%>" target="_blank" rel="noopener noreferrer">git</a><br><br>
+        <a class="sil" data-doc="<%=xl._id%>" style="display: none; color: rgb(194, 0, 0); font-size: 25px; text-decoration: none; font-weight: 700;">sil</a>
+        <hr>
+    <%})%>
+    <script>
+var isim = prompt();
+   
+    if(isim=="NU9bx3G2uRyeRywqfYKr"){
+        document.querySelector('body').style.display="block"
+    } 
+   
+      
+
+        const del = document.querySelectorAll('a.sil')
+        const delLinks = [].slice.call(del)
+
+        delLinks.forEach((item, i) => {
+            item.addEventListener('click' , (e) => {
+            const endpoint = `/delete/${item.dataset.doc}`
+
+            fetch(endpoint, {
+                method: 'DELETE'
+            })
+            .then((response) => response.json())
+            .then((data) => window.location.href = data.link)
+            .catch((err) => {
+                console.log(err);
+            })
+        }) 
+        });
+
+        function kopyala(){
+            document.execCommand("copy");
+            alert('kopyalandı!')
+        }
+    </script>
+</body>
+</html>
