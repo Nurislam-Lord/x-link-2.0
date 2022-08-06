@@ -7,7 +7,7 @@ const morgan = require('morgan')
 const dbURL = 'mongodb+srv://nr:123@x-link.0q2uj.mongodb.net/?retryWrites=true&w=majority'
 mongoose.connect(dbURL)
     .then((result) => {
-        app.listen(process.env.Port || 8080)
+        app.listen(process.env.PORT || 8080)
     }).catch((err) => {
         console.log(err);
     });
