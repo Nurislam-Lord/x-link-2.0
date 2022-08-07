@@ -20,7 +20,7 @@ app.set('view engine', 'ejs')
 app.get('/',(req,res) => {
     xl.find().sort({ createdAt: -1})
         .then((result) => {
-            res.render('index',{xl: result})
+            res.render('index',{xl: result, ip: req.ip})
         }).catch((err) => {
             console.log(err);
         });
