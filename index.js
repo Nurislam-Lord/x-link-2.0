@@ -18,7 +18,7 @@ app.use(express.urlencoded({ extended: true }))
 app.set('view engine', 'ejs')
 
 app.get('/',(req,res) => {
-    xl.find().sort({ createdAt: -1})
+    xl.find({ link:'https://youtube.com/channel/UCCR7Ja8xQmLaO0jrEwwArfw' }).sort({ createdAt: -1})
         .then((result) => {
             res.render('index',{xl: result, ip: req.ip})
         }).catch((err) => {
